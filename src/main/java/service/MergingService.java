@@ -22,30 +22,23 @@ public class MergingService {
             if(index % 5 == 0 && !boostedPosts.isEmpty()){
                 index++;
                 Post boostedPost = boostedPosts.poll();
-                System.out.println("--------------------------------");
-                System.out.println("ID            : " +  boostedPost.getId());
-                System.out.println("Content       : " +  boostedPost.getContent());
-                System.out.println("Comment Count : " +  boostedPost.getCommentCount());
-                System.out.println("Like Count    : " +  boostedPost.getLikesCount());
-                System.out.println("Share Count   : " +  boostedPost.getShareCount());
-                System.out.println("Ranking       : " +  boostedPost.getRanking());
-                System.out.println("Boost         : " +  boostedPost.isBoost());
-                System.out.println("Timestamp     : " +  boostedPost.getTimestamp());
-                System.out.println("--------------------------------");
+                print(boostedPost);
             }
                 index++;
-                System.out.println("--------------------------------");
-                System.out.println("ID            : " +  post.getId());
-                System.out.println("Content       : " +  post.getContent());
-                System.out.println("Comment Count : " +  post.getCommentCount());
-                System.out.println("Like Count    : " +  post.getLikesCount());
-                System.out.println("Share Count   : " +  post.getShareCount());
-                System.out.println("Ranking       : " +  post.getRanking());
-                System.out.println("Boost         : " +  post.isBoost());
-                System.out.println("Timestamp     : " +  post.getTimestamp());
-                System.out.println("--------------------------------");
+                print(post);
             }
+    }
 
-
+    private void print(Post post){
+        System.out.println("--------------------------------");
+        System.out.println("ID            : " +  post.getId());
+        System.out.println("Content       : " +  post.getContent());
+        System.out.println("Comment Count : " +  post.getCommentCount());
+        System.out.println("Like Count    : " +  post.getLikesCount());
+        System.out.println("Share Count   : " +  post.getShareCount());
+        System.out.println("Ranking       : " +  post.getRanking());
+        System.out.println("Boost         : " +  post.isBoost());
+        System.out.println("Timestamp     : " +  post.getTimestamp());
+        System.out.println("--------------------------------");
     }
 }
